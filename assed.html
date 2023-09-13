@@ -1,0 +1,2382 @@
+// const items = [
+//     {
+//         name: "iPhone 12",
+//         price: "Rs 79,900",
+//         ram: "4 GB",
+//         rom: "64 GB",
+//         camera: "12 MP dual-camera",
+//         battery: "2815 mAh",
+//         image: "images/pictwo.jpeg",
+//     },
+//     {
+//         name: "iPhone SE",
+//         price: "Rs 37,900",
+//         ram: "3 GB",
+//         rom: "64 GB",
+//         camera: "12 MP single-camera",
+//         battery: "1821 mAh",
+//         image: "images/picthree.jpeg",
+//     },
+//     {
+//         name: "iPhone XR",
+//         price: "Rs 47,900",
+//         ram: "3 GB",
+//         rom: "64 GB",
+//         camera: "12 MP single-camera",
+//         battery: "2942 mAh",
+//         image: "images/picthen.jpeg",
+//     },
+
+//     {
+//         name: "apple iPhone 12 iPhone 11 iPhone SE",
+//         price: "Rs 64,900",
+//         ram: "4 GB",
+//         rom: "64 GB",
+//         camera: "12 MP dual-camera",
+//         battery: "3110 mAh",
+//         image: "images/picsix.jpeg", 
+//     },
+//     {
+//         name: "samsung  Galaxy phone S21 Galaxy Note 20 Galaxy A series",
+//         price: "Rs 79,900",
+//         ram: "6 GB",
+//         rom: "120 GB",
+//         camera: "12 MP dual-camera",
+//         battery: "2815 mAh",
+//         image:"images/picseven.jpeg"
+//     },
+//     {
+//         name: "google phone Pixel 5 Pixel 4a Pixel 3",
+//         price: "Rs 37,900",
+//         ram: "3 GB",
+//         rom: "64 GB",
+//         camera: "12 MP single-camera",
+//         battery: "1821 mAh",
+//         image: "images/picnane.jpeg",
+//     },
+//     {
+//         name: "huawei phone  Mate 40 Pro Mate 30",
+//         price: "Rs 47,900",
+//         ram: "3 GB",
+//         rom: "64 GB",
+//         camera: "12 MP single-camera",
+//         battery: "2942 mAh",
+//         image:"images/picfour.jpeg",
+//     },
+//     {
+//         name: "oppo Find series phone (e.g., Find X3 Pro, Find X2)",
+//         price: "Rs 47,900",
+//         ram: "3 GB",
+//         rom: "64 GB",
+//         camera: "12 MP single-camera",
+//         battery: "2942 mAh",
+//         image:"images/picegiht.jpeg",
+//     },
+//     {
+//         name: "vivo V series phone (e.g., Vivo V21, Vivo V17)",
+//         price: "Rs 47,900",
+//         ram: "3 GB",
+//         rom: "64 GB",
+//         camera: "12 MP single-camera",
+//         battery: "2942 mAh",
+//         image:"images/five.jpeg",
+//     },
+//     {
+//         name: "lg LG G series phone (e.g., LG G8, LG G7) ",
+//         price: "Rs 47,900",
+//         ram: "3 GB",
+//         rom: "64 GB",
+//         camera: "12 MP single-camera",
+//         battery: "2942 mAh",
+//         image:"images/bodyimg1.jpeg",
+//     },
+
+// ];
+
+// function searchItems() {
+//     const searchInput = document.getElementById("searchInput");
+//     const searchTerm = searchInput.value.toLowerCase();
+//     const itemList = document.getElementById("itemList");
+
+//     // Clear befor search results
+
+//     itemList.innerHTML = "";
+
+//     // Filter and display matching items
+    
+//     const filteredItems = items.filter((item) =>
+//         item.name.toLowerCase().includes(searchTerm)
+//     );
+
+//     if (filteredItems.length === 0) {
+//         const div = document.createElement("div");
+//         div.textContent = "No matching items found.";
+//         itemList.appendChild(div);
+//     } else {
+//         filteredItems.forEach((item) => {
+//             const li = document.createElement("li");
+//             li.innerHTML = `
+            
+//             <div class="main-img">
+//                 <img src="./images/pictwo.jpeg" alt="My Image">
+//             </div>
+//             <div class="main-box-contint">
+//                 <div class="inboxtop">
+//                     <div><h3>${sampleItem.price}</h3></div>
+//                     <div class="main-icon"><i class="fa-regular fa-heart"></i></div>
+//                 </div>
+//                 <br>
+//                 <h3 class="title">${sampleItem.title}</h3>
+//                 <br>
+//                 <br>
+//                 <h6>${sampleItem.location}</h6>
+//                 <div class="icon-box-main">
+//                     <div class="top-bar-itesms">
+//                         <button class="last-left-butten">
+//                             <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+//                         </button>
+//                     </div>
+//                     <div class="top-bar-itesms icon-two">
+//                         <button class="last-left-butten chat-icon">
+//                             <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+//                         </button>
+//                     </div>
+//                 </div>
+//             </div>
+            
+//             `;
+
+//             itemList.appendChild(li);
+//         });
+
+//     }
+//     document.getElementById('tableview').style.display= 'none';
+//     document.getElementById('listview').style.display='none';
+//     document.getElementById('itemList').style.display='block';
+    
+// }
+
+// function listForm(){
+//     document.getElementById('tableview').style.display= 'none';
+//     document.getElementById('listview').style.display='block';
+    
+// }
+
+// function tableForm(){
+//     document.getElementById('listview').style.display='none';
+//     document.getElementById('tableview').style.display= 'block';
+// }
+
+
+
+
+
+
+
+
+
+
+
+function searchItems() {
+    // Get the search query from the input field
+    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+
+    // Here, you can perform your search logic, e.g., matching items based on a dataset
+
+    // For demonstration purposes, let's assume a sample item
+    const sampleItem = {
+        price: '65,000',
+        title: 'iphone 15 pro 256 gb non pta,,0319-3824547 whatsapp only',
+        location: 'karoni gilgit colony . 2 days ago',
+
+    };
+    // const sampleItem2 = {
+    //     price: '1500,000',
+    //     title: 'iphone 11 pro 256 gb non pta,,0319-3824547 whatsapp only',
+    //     location: 'karoni gilgit colony . 21 days ago',
+    // };
+
+    // Check if the search query matches the item's title
+    if (sampleItem.title.toLowerCase().includes(searchQuery)) {
+        // Create a new div element with the matching content
+        const searchResultDiv = document.createElement('div');
+        searchResultDiv.className = 'main-video';
+        searchResultDiv.innerHTML = `
+            <div class="main-img">
+                <img src="./images/pictwo.jpeg" alt="My Image">
+            </div>
+            <div class="main-box-contint">
+                <div class="inboxtop">
+                    <div><h3>${sampleItem.price}</h3></div>
+                    <div class="main-icon"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <br>
+                <h3 class="title">${sampleItem.title}</h3>
+                <br>
+                <br>
+                <h6>${sampleItem.location}</h6>
+                <div class="icon-box-main">
+                    <div class="top-bar-itesms">
+                        <button class="last-left-butten">
+                            <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+                        </button>
+                    </div>
+                    <div class="top-bar-itesms icon-two">
+                        <button class="last-left-butten chat-icon">
+                            <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Append the matching result to the container
+        const searchResultsContainer = document.getElementById('searchResults');
+        searchResultsContainer.appendChild(searchResultDiv);
+    }
+    document.getElementById('tableview').style.display= 'none';
+         document.getElementById('listview').style.display='none';
+         document.getElementById('itemList').style.display='block';
+}
+
+function listForm(){
+    document.getElementById('tableview').style.display= 'none';
+    document.getElementById('listview').style.display='block';
+    
+}
+
+function tableForm(){
+    document.getElementById('listview').style.display='none';
+    document.getElementById('tableview').style.display= 'block';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// function searchItems() {
+    //     // Get the search query from the input field
+    //     const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+    
+    //     // Here, you can perform your search logic, e.g., matching items based on a dataset
+    
+    //     // For demonstration purposes, let's assume a sample item
+    //     const sampleItem = {
+    //         price: '65,000',
+    //         title: 'iphone 15 pro 256 gb non pta,,0319-3824547 whatsapp only',
+    //         location: 'karoni gilgit colony . 2 days ago',
+    
+    //     };
+    //     // const sampleItem2 = {
+    //     //     price: '1500,000',
+    //     //     title: 'iphone 11 pro 256 gb non pta,,0319-3824547 whatsapp only',
+    //     //     location: 'karoni gilgit colony . 21 days ago',
+    //     // };
+    
+    //     // Check if the search query matches the item's title
+    //     if (sampleItem.title.toLowerCase().includes(searchQuery)) {
+    //         // Create a new div element with the matching content
+    //         const searchResultDiv = document.createElement('div');
+    //         searchResultDiv.className = 'main-video';
+    //         searchResultDiv.innerHTML = `
+    //             <div class="main-img">
+    //                 <img src="./images/pictwo.jpeg" alt="My Image">
+    //             </div>
+    //             <div class="main-box-contint">
+    //                 <div class="inboxtop">
+    //                     <div><h3>${sampleItem.price}</h3></div>
+    //                     <div class="main-icon"><i class="fa-regular fa-heart"></i></div>
+    //                 </div>
+    //                 <br>
+    //                 <h3 class="title">${sampleItem.title}</h3>
+    //                 <br>
+    //                 <br>
+    //                 <h6>${sampleItem.location}</h6>
+    //                 <div class="icon-box-main">
+    //                     <div class="top-bar-itesms">
+    //                         <button class="last-left-butten">
+    //                             <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+    //                         </button>
+    //                     </div>
+    //                     <div class="top-bar-itesms icon-two">
+    //                         <button class="last-left-butten chat-icon">
+    //                             <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+    //                         </button>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         `;
+    
+    //         // Append the matching result to the container
+    //         const searchResultsContainer = document.getElementById('searchResults');
+    //         searchResultsContainer.appendChild(searchResultDiv);
+    //     }
+    //     document.getElementById('tableview').style.display= 'none';
+    //          document.getElementById('listview').style.display='none';
+    //          document.getElementById('itemList').style.display='block';
+    // }
+    
+    
+    
+    
+<!--     
+    function searchItems() {
+        // Get the search query from the input field
+        const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+    
+        // Define your sample items with different images
+        const sampleItems = [
+            {
+                price: '279,999',
+                title: 'iPhone 13 Pro',
+                location: 'karoni gilgit colony . 2 days ago',
+                image: './images/bodyimg1.jpeg',
+            },
+            // Add other items with their prices, titles, locations, and images here
+        ];
+    
+        // Clear the search results container before displaying new results
+        const searchResultsContainer = document.getElementById('searchResults');
+        searchResultsContainer.innerHTML = '';
+    
+        // Filter the items based on the search query and price
+        const filteredItems = sampleItems.filter((item) => {
+            return item.price.includes(searchQuery);
+        });
+    
+        // Create result elements for each matching item
+        filteredItems.forEach((item) => {
+            const searchResultDiv = document.createElement('div');
+            searchResultDiv.className = 'main-video';
+            searchResultDiv.innerHTML = `
+                <div class="main-img">
+                    <img src="${item.image}" alt="Item Image">
+                </div>
+                <div class="main-box-contint">
+                    <div class="inboxtop">
+                        <div><h3>${item.price}</h3></div>
+                        <div class="main-icon"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <br>
+                    <h3 class="title">${item.title}</h3>
+                    <br>
+                    <br>
+                    <h6>${item.location}</h6>
+                    <div class="icon-box-main">
+                        <div class="top-bar-itesms">
+                            <button class="last-left-butten">
+                                <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+                            </button>
+                        </div>
+                        <div class="top-bar-itesms icon-two ">
+                            <button class="last-left-butten chat-icon">
+                                <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            searchResultsContainer.appendChild(searchResultDiv);
+        });
+    
+        // Hide other views and show the search results view
+        document.getElementById('tableview').style.display = 'none';
+        document.getElementById('listview').style.display = 'none';
+        document.getElementById('itemList').style.display = 'block';
+    } -->
+    
+
+
+
+
+
+
+
+
+    <!-- maine code
+    
+function searchItems() {
+    // yaha sa search query or input sa value layrha h
+
+    const searchItems = document.getElementById('searchInput').value.toLowerCase();
+
+    // ya array h is ma sab items h 
+    const sampleItems = [
+        {
+            price: '279,999',
+            title: 'iPhone 13 Pro',
+            location: 'karoni gilgit colony . 2 days ago',
+            image:'./images/bodyimg1.jpeg',
+        },
+        {
+            price: '249,999',
+            title: 'iPhone 13 Pro 256 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 2 days ago',
+            image:'./images/pictwo.jpeg',
+        },
+        {
+            price: '199,999',
+            title: 'iPhone 13 55 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 2 days ago',
+            image:'./images/picthree.jpeg',
+        },
+        {
+            price: '2500,000',
+            title: 'iphone 12 pro 55 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 1 year ago',
+            image:'./images/picfour.jpeg',
+        },
+        {
+            price: '229,999',
+            title: 'iPhone 12 Por 55 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 1 week ago',
+            image:'./images/five.jpeg',
+        },
+        {
+            price: '179,999',
+            title: 'iPhone 11 Por 55 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 3 weeks ago',
+            image:'./images/picseven.jpeg',
+        },
+        {
+            price: '40,000',
+            title: 'iphone 7 Por 55 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 15 days ago',
+            image:'./images/picegiht.jpeg',
+        },
+        {
+            price: '65,000',
+            title: 'iphone XR pro 55 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 18 days ago',
+            image:'./images/picnane.jpeg',
+        },
+        {
+            price: '180,000',
+            title: 'iphone XS Max pro 55 gb non pta,,0319-3824547 whatsapp only',
+            location: 'karoni gilgit colony . 22 days ago',
+            image:'./images/picthen.jpeg',
+        },
+        {
+            price: '45,000',
+            title: 'iphone 7 plus 55 gb non pta,,0319-3824547 whatsapp only',
+            location: ' karoni gilgit colony . 1 days ago',
+            image:'./images/picthree.jpeg',
+        },
+    
+    ];
+
+    // Clear befor search results
+    
+
+    const searchResultsContainer = document.getElementById('searchResults');
+    searchResultsContainer.innerHTML = '';
+
+
+    sampleItems.forEach((item) => {
+        if (item.title.price.toLowerCase().includes(searchItems)) {
+            
+            // Create a new div element with the matching content
+            const searchResultDiv = document.createElement('div');
+            searchResultDiv.className = 'main-video';
+            searchResultDiv.innerHTML = `
+                <div class="main-img">
+                    <img src="./images/pictwo.jpeg" alt="My Image">
+                </div>
+                <div class="main-box-contint">
+                    <div class="inboxtop">
+                        <div><h3>${item.price}</h3></div>
+                        <div class="main-icon"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <br>
+                    <h3 class="title">${item.title}</h3>
+                    <br>
+                    <br>
+                    <h6>${item.location}</h6>
+                    <div class="icon-box-main">
+                        <div class="top-bar-itesms">
+                            <button class="last-left-butten">
+                                <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+                            </button>
+                        </div>
+                        <div class="top-bar-itesms icon-two ">
+                            <button class="last-left-butten chat-icon">
+                                <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Append the matching result to the container
+            searchResultsContainer.appendChild(searchResultDiv);
+        }
+
+    });
+
+    document.getElementById('tableview').style.display = 'none';
+    document.getElementById('listview').style.display = 'none';
+    document.getElementById('itemList').style.display = 'block';
+
+    
+} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="tableview">
+
+    <tr>
+        <td>
+           <div class="main-box" >
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div
+        >
+      </td>
+  
+        <td>
+          
+          <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div>
+      
+      </td>
+        <td>
+           <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div>
+      </td>
+  
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td ><div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td>
+         <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td ><div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td><div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+        <td> <div class="main-box">
+          <div class="box-img">
+            <img src="images/picthree.jpeg" alt="">
+          </div>
+          <div class="icon-rs">
+            <div class="rs">
+              <h4>Rs 25,999</h4>
+            </div>
+            <div class="box-icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>  <div class="main-p">
+            <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+          </div>
+          <div class="bottom">
+            <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+            <h6>9 hours ago</h6>
+          </div>
+        </div></td>
+    </tr>
+  </table>
+
+
+
+
+
+  // code
+
+  <div id="listview">
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+    <div class="main-img">
+        <img src="./images/bodyimg1.jpeg" alt="My Image" >
+    </div>
+    <!--open -box-contint -->
+    <div class="main-box-contint">
+    <div class="inboxtop">
+        <div class="">
+            <h3>Rs 279,999</h3>
+           </div>
+           <div class="main-icon">
+            <i class="fa-regular fa-heart"></i>
+           </div>
+    </div>
+     <br>
+     <h3 class="title">iPhone 13 Pro Max karoni gilgit colony . 2 days ago</h3>  
+      <br>
+      <br>
+      <h6> karoni gilgit colony . 2 days ago </h6> 
+      <div class="icon-box-main">
+        <div class="top-bar-itesms">
+            <button class="last-left-butten">
+                <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+            </button>
+          </div>
+          <div class="top-bar-itesms icon-two ">
+            <button class="last-left-butten chat-icon">
+                <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+            </button>
+          </div>
+      </div> 
+      
+    </div> 
+    
+        
+    </div>
+    <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/pictwo.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+      <div class=""><h3>Rs 249,999</h3></div>
+      <div class="main-icon"><i class="fa-regular fa-heart"></i></div></div><br>
+      <h3 class="title">iPhone 13 Pro 256 gb non pta,,0319-3824547 whatsapp only</h3><br><br>
+      <h6> karoni gilgit colony . 2 days ago </h6> 
+      <div class="icon-box-main"><div class="top-bar-itesms"><button class="last-left-butten">
+      <i class="fa-solid fa-phone"></i> <strong>Call</strong></button></div>
+      <div class="top-bar-itesms icon-two "><button class="last-left-butten chat-icon">
+      <i class="fa-regular fa-comment"></i><strong>Chat</strong></button></div></div></div> 
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/picthree.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 199,999</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iPhone 13 55 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 2 days ago </h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/picfour.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 2500,000</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iphone 12 pro 56 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 1 year ago </h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/five.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 229,999</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iPhone 12 Por 256 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 1 week ago </h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/picseven.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 179,999</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iPhone 11 256 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 3 weeks ago</h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/picegiht.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 40,000</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iphone 7 pro 256 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 15 days ago </h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/picnane.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 65,000</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iphone XR pro 156 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 18 days ago </h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/picthen.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 180,000</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iphone XS Max pro 56 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 22 days ago </h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    <!--open mean picher one box body=============================================================  -->
+    <div class="main-video">
+      <div class="main-img">
+          <img src="./images/picthree.jpeg" alt="My Image" >
+      </div>
+      <!--open -box-contint -->
+      <div class="main-box-contint">
+      <div class="inboxtop">
+          <div class="">
+              <h3>Rs 45,000</h3>
+             </div>
+             <div class="main-icon">
+              <i class="fa-regular fa-heart"></i>
+             </div>
+      </div>
+       <br>
+       <h3 class="title">iphone 7 plus pro 256 gb non pta,,0319-3824547 whatsapp only</h3>  
+        <br>
+        <br>
+        <h6> karoni gilgit colony . 1 days ago </h6> 
+        <div class="icon-box-main">
+          <div class="top-bar-itesms">
+              <button class="last-left-butten">
+                  <i class="fa-solid fa-phone"></i> <strong>Call</strong>
+              </button>
+            </div>
+            <div class="top-bar-itesms icon-two ">
+              <button class="last-left-butten chat-icon">
+                  <i class="fa-regular fa-comment"></i><strong>Chat</strong>
+              </button>
+            </div>
+        </div> 
+        
+      </div> 
+      
+          
+      </div>
+      <!--close mean picherone box body=============================================================  -->
+    </div>
+
+
+
+
+
+    <!-- table  -->
+
+    <table id="tableview">
+
+        <tr>
+            <td>
+               <div class="main-box" >
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div
+            >
+          </td>
+      
+            <td>
+              
+              <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div>
+          
+          </td>
+            <td>
+               <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div>
+          </td>
+      
+        </tr>
+        <tr>
+            <td><div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td ><div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td>
+             <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td ><div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td>
+                 <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td><div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+            <td> <div class="main-box">
+              <div class="box-img">
+                <img src="images/picthree.jpeg" alt="">
+              </div>
+              <div class="icon-rs">
+                <div class="rs">
+                  <h4>Rs 25,999</h4>
+                </div>
+                <div class="box-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>  <div class="main-p">
+                <p>SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery</p>
+              </div>
+              <div class="bottom">
+                <h6 classs="h6-bottom">NOOR MOBILE DHARAMPURA </h6>
+                <h6>9 hours ago</h6>
+              </div>
+            </div></td>
+        </tr>
+      </table>
+
+      
+// Get a reference to the table's tbody element
+// const tableBody = document.querySelector('#tableview tbody');
+// Define your sample items with different images
+// const sampleItems = [
+//     {
+//         price: 'Rs 25,999',
+//         title: 'SAPRKX NEO 7 PLUS (4GB 64GB) Box Pack 5000MP battery',
+//         location: 'NOOR MOBILE DHARAMPURA | 9 hours ago',
+//         image: 'images/picthree.jpeg',
+//     },
+//     {
+//         price: '279,999',
+//         title: 'iPhone 13 Pro',
+//         location: 'karoni gilgit colony . 2 days ago',
+//         image: './images/bodyimg1.jpeg',
+//     },
+//     {
+//         price: '279,999',
+//         title: 'iPhone 13 Pro',
+//         location: 'karoni gilgit colony . 2 days ago',
+//         image:'./images/bodyimg1.jpeg',
+//     },
+//     {
+//         price: '249,999',
+//         title: 'iPhone 13 Pro 256 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 2 days ago',
+//         image:'./images/pictwo.jpeg',
+//     },
+//     {
+//         price: '199,999',
+//         title: 'iPhone 13 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 2 days ago',
+//         image:'./images/picthree.jpeg',
+//     },
+//     {
+//         price: '2500,000',
+//         title: 'iphone 12 pro 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 1 year ago',
+//         image:'./images/picfour.jpeg',
+//     },
+//     {
+//         price: '229,999',
+//         title: 'iPhone 12 Por 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 1 week ago',
+//         image:'./images/five.jpeg',
+//     },
+//     {
+//         price: '179,999',
+//         title: 'iPhone 11 Por 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 3 weeks ago',
+//         image:'./images/picseven.jpeg',
+//     },
+//     {
+//         price: '40,000',
+//         title: 'iphone 7 Por 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 15 days ago',
+//         image:'./images/picegiht.jpeg',
+//     },
+//     {
+//         price: '65,000',
+//         title: 'iphone XR pro 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 18 days ago',
+//         image:'./images/picnane.jpeg',
+//     },
+//     {
+//         price: '180,000',
+//         title: 'iphone XS Max pro 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: 'karoni gilgit colony . 22 days ago',
+//         image:'./images/picthen.jpeg',
+//     },
+//     {
+//         price: '45,000',
+//         title: 'iphone 7 plus 55 gb non pta,,0319-3824547 whatsapp only',
+//         location: ' karoni gilgit colony . 1 days ago',
+//         image:'./images/picthree.jpeg',
+//     },
+    
+//     // Add more items as needed
+// ];
+
+// Loop through your sampleItems and add each item to the table
+// sampleItems.forEach((item) => {
+//     const tableRow = document.createElement('tr');
+//     tableRow.tagName = 'table' 
+//     tableRow.innerHTML = `
+//     <td>
+//             <div class="main-box">
+//                 <div class="box-img">
+//                     <img src="${item.image}" alt="">
+//                 </div>
+//                 <div class="icon-rs">
+//                     <div class="rs">
+//                         <h4>${item.price}</h4>
+//                     </div>
+//                     <div class="box-icon">
+//                         <i class="fa-regular fa-heart"></i>
+//                     </div>
+//                 </div>
+//                 <div class="main-p">
+//                     <p>${item.title}</p>
+//                 </div>
+//                 <div class="bottom">
+//                     <h6 class="h6-bottom">${item.location}</h6>
+//                 </div>
+//             </div>
+//         </td>
+//     `;
+    
+//     tableBody.appendChild(tableRow);
+// });
+
+// // Function to show Table View
+// function showTableView() {
+//     console.log("showTableView() function called");
+//     document.getElementById('searchResults').style.display = 'none';
+//     document.getElementById('tableview').style.display = 'table';
+// }
+
+  
+//   // Initial view (you can set this to your default preference)
+//   showListView();
